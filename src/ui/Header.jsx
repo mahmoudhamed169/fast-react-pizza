@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SearchOrder from "./SearchOrder";
 
 export default function Header() {
   return (
@@ -7,6 +8,7 @@ export default function Header() {
       <Link to="/menu"> Menu </Link>
       <Link to="/about"> About </Link>
 
+      <SearchOrder />
     </header>
   );
 }
