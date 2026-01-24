@@ -8,12 +8,16 @@ export default function AppLayout() {
 
   const isLoading = navigation.state === "loading";
   return (
-    <div className="layout">
+    <div className="grid min-h-screen grid-rows-[auto_1fr_auto]">
       {isLoading && <Loader />}
+  
+
       <Header />
-      <main>
-        <Outlet />
-      </main>
+      <div className="overflow-auto">
+        <main className="mx-auto max-w-3xl">
+          <Outlet />
+        </main>
+      </div>
       {/* <Link to={"/"}>Open cart &rrar;</Link> */}
       <CartOverview />
     </div>
